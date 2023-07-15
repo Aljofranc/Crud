@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border: 5px solid #000; /* Añadir borde al contenedor principal */
+}
+
+.light-mode {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.container.light-mode #itemListContainer {
+  background-color: #000;
+  color: #fff;
+}
+
+.container.dark-mode #itemListContainer {
+  background-color: #fff;
+  color: #000;
+}
+
+.container.light-mode #itemListContainer li {
+  border-bottom: 1px solid #fff;
+}
+
+.container.dark-mode #itemListContainer li {
+  border-bottom: 1px solid #000;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #000; /* Añadir borde al itemInput */
+}
+
+.input-container button {
+  padding: 5px 10px;
+  border: none;
+}
+
+#itemListContainer {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+#itemList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#itemList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#itemList li .item {
+  flex-grow: 1;
+  color: inherit; /* Mantener el color del texto del contenedor padre (itemListContainer) */
+}
+
+#itemList li .delete-btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  margin-left: 10px;
+}
+
+#toggleModeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
